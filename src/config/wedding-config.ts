@@ -350,7 +350,7 @@ logo: "images/logos/bci.png"
   rsvp: {
     enabled: true,
     deadline: "2026-12-20",
-    whatsappNumber: "846967721",
+    whatsappNumber: "258846967721",
     additionalFields: [
       {
         name: "quantidade_convidados",
