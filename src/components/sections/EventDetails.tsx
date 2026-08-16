@@ -5,7 +5,7 @@ import { CalendarIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline
 
 export default function EventDetails() {
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('id-ID', {
+    return new Date(dateString).toLocaleDateString('pt-MZ', {
       weekday: 'long',
       year: 'numeric',
       month: 'long',
@@ -13,9 +13,24 @@ export default function EventDetails() {
     });
   };
 
+  // Função para abrir o Google Maps utilizando o endereço ou mapLink como destino e traçar a rota a partir da localização atual
+  const handleGetDirections = (venue: string, address: string, mapLink: string) => {
+    // Se o mapLink for uma URL válida do Google Maps contendo coordenadas ou query, tentamos extrair ou usar o endereço/venue
+    const destinationQuery = encodeURIComponent(`${venue}, ${address}`);
+    // A URL de direções do Google Maps ('/dir/') aceita o parâmetro destination. 
+    // Quando omitimos o 'origin', o Google Maps usa automaticamente a localização atual do GPS do utilizador.
+    const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${destinationQuery}`;
+    
+    // Fallback: se o mapLink do config for um link customizado ou de coordenadas, podemos priorizá-lo se necessário, 
+    // mas para a trajetória ponto-a-ponto o padrão de 'dir/' é o ideal.
+    window.open(directionsUrl, '_blank');
+  };
+
   const events = [
-    { title: 'Akad Nikah', details: weddingConfig.event.akad },
-    { title: 'Resepsi', details: weddingConfig.event.reception }
+        { title: 'Lobolo', details: weddingConfig.event.lobolo },
+    { title: 'Cerimónia Religiosa / Registo Civil', details: weddingConfig.event.akad },
+    { title: 'Copo de Agua / Recepção', details: weddingConfig.event.reception },
+    { title: 'Chiguiane', details: weddingConfig.event.chiguiane }
   ];
 
   return (
@@ -28,8 +43,8 @@ export default function EventDetails() {
           className="text-center mb-16"
         >
           <div className="relative bg-black/20 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
-            <h2 className="text-4xl font-serif mb-4 text-white">Save the Date</h2>
-            <p className="text-white/90">We invite you to celebrate our special day</p>
+            <h2 className="text-4xl font-serif mb-4 text-white">Reserve a Data</h2>
+            <p className="text-white/90">Convidamo-vos a celebrar o nosso dia especial</p>
           </div>
         </motion.div>
 
@@ -44,8 +59,8 @@ export default function EventDetails() {
               className="relative bg-white p-8 rounded-lg shadow-lg overflow-hidden"
               style={{ minHeight: '400px' }}
             >
-              {/* Decorations for Akad card */}
-              {event.title === 'Akad Nikah' && (
+              {/* Decorations for Cerimónia card */}
+              {event.title === 'Cerimónia Religiosa / Registo Civil' && (
                 <>
                   <div className="absolute -top-8 -left-8 w-32 h-32 opacity-50">
                     <Image
@@ -66,8 +81,8 @@ export default function EventDetails() {
                 </>
               )}
 
-              {/* Decorations for Resepsi card */}
-              {event.title === 'Resepsi' && (
+              {/* Decorations for Copo de Agua card */}
+              {event.title === 'Copo de Agua / Recepção' && (
                 <>
                   <div className="absolute -top-8 -left-8 w-32 h-32 opacity-50">
                     <Image
@@ -100,7 +115,7 @@ export default function EventDetails() {
                 <div className="flex items-start gap-4">
                   <ClockIcon className="w-6 h-6 text-gray-400" />
                   <div>
-                    <p className="font-medium">{event.details.time} WIB</p>
+                    <p className="font-medium">{event.details.time}</p>
                   </div>
                 </div>
 
@@ -114,19 +129,17 @@ export default function EventDetails() {
 
                 {event.details.dresscode && (
                   <div className="text-center mt-6">
-                    <p className="text-sm text-gray-500">Dress Code</p>
-                    <p className="font-medium">{event.details.dresscode}</p>
+                    {/*<p className="text-sm text-gray-500">Código de Vestimenta</p>
+                    <p className="font-medium">{event.details.dresscode}</p>*/}
                   </div>
                 )}
 
-                <a
-                  href={event.details.mapLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-3 rounded-lg transition-colors mt-6"
+                <button
+                  onClick={() => handleGetDirections(event.details.venue, event.details.address, event.details.mapLink)}
+                  className="block w-full text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-3 rounded-lg transition-colors mt-6 cursor-pointer"
                 >
-                  View Location
-                </a>
+                  Ver Localização
+                </button>
 
                 <button
                   onClick={() => {
@@ -149,14 +162,14 @@ export default function EventDetails() {
                     const url = URL.createObjectURL(blob);
                     const link = document.createElement('a');
                     link.href = url;
-                    link.download = `${event.title.replace(' ', '_')}_${weddingConfig.couple.bride.name}_${weddingConfig.couple.groom.name}.ics`;
+                    link.download = `${event.title.replace(/[\s/]+/g, '_')}_${weddingConfig.couple.bride.name}_${weddingConfig.couple.groom.name}.ics`;
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
                   }}
-                  className="block w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold text-lg py-4 px-6 rounded-lg shadow-lg border-2 border-gray-800 transition-all duration-200 mt-4 active:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 relative z-10"
+                  className="block w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold text-lg py-4 px-6 rounded-lg shadow-lg border-2 border-gray-800 transition-all duration-200 mt-4 active:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 relative z-10 cursor-pointer"
                 >
-                  Save to Calendar
+                  Adicionar ao Calendário
                 </button>
               </div>
             </motion.div>

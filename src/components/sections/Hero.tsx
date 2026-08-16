@@ -109,7 +109,7 @@ export default function Hero({ guestName }: HeroProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="bg-white/10 backdrop-blur-md p-6 rounded-2xl relative overflow-hidden"
+          className="bg-white/15 backdrop-blur-md p-6 rounded-2xl relative overflow-hidden shadow-xl border border-white/20"
         >
           {/* Creative Decorative Elements */}
           <div className="absolute -bottom-8 -right-8 w-20 opacity-70 animate-float-slow">
@@ -135,9 +135,9 @@ export default function Hero({ guestName }: HeroProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="text-white/90 text-xl mb-6"
+              className="text-white/95 text-xl mb-6 font-medium drop-shadow"
             >
-              Dear {guestName},
+              Estimado(a) {guestName},
             </motion.p>
           )}
           
@@ -145,9 +145,9 @@ export default function Hero({ guestName }: HeroProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="text-white/80 text-xl mb-4"
+            className="text-white/90 text-xl mb-4 drop-shadow"
           >
-              You are invited to our wedding.
+            Tem o prazer de o(a) convidar para o nosso casamento.
           </motion.p>
 
           <motion.div className="space-y-4">
@@ -155,7 +155,7 @@ export default function Hero({ guestName }: HeroProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 1 }}
-              className="text-4xl md:text-6xl font-serif text-white"
+              className="text-4xl md:text-6xl font-serif text-white drop-shadow-md"
             >
               {weddingConfig.couple.bride.name}
             </motion.h1>
@@ -164,7 +164,7 @@ export default function Hero({ guestName }: HeroProps) {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 1.2, type: 'spring', stiffness: 100 }}
-              className="text-2xl md:text-3xl text-white/80"
+              className="text-2xl md:text-3xl text-white/90 font-serif drop-shadow"
             >
               &
             </motion.div>
@@ -173,7 +173,7 @@ export default function Hero({ guestName }: HeroProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4, duration: 1 }}
-              className="text-4xl md:text-6xl font-serif text-white"
+              className="text-4xl md:text-6xl font-serif text-white drop-shadow-md"
             >
               {weddingConfig.couple.groom.name}
             </motion.h1>
@@ -183,9 +183,9 @@ export default function Hero({ guestName }: HeroProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.1 }}
-            className="text-white/90 text-lg mt-4"
+            className="text-white/95 text-lg mt-6 font-medium drop-shadow"
           >
-            {new Date(weddingConfig.event.akad.date).toLocaleDateString('id-ID', {
+            {new Date(weddingConfig.event.akad.date).toLocaleDateString('pt-MZ', {
               day: 'numeric',
               month: 'long',
               year: 'numeric'

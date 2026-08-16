@@ -119,18 +119,9 @@ export default function CoupleProfile() {
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          {/* <h2 className="text-3xl font-serif mb-4">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</h2> */}
-          <div className="relative w-64 h-32 mx-auto mb-4">
-            <Image
-              src="wedding-invitation/images/background/bismillah.png"
-              alt="Bismillah"
-              fill
-              className="object-contain"
-            />
-          </div>
           <div className="relative bg-black/20 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
-            <p className="text-white text-lg font-medium leading-relaxed">In the Name of Allah, the Most Beneficent, the Most Merciful</p>
-            <p className="mt-4 text-white/90 leading-relaxed">Dengan memohon rahmat dan ridho-Mu Ya Allah, izinkan kami mengundang Bapak/Ibu/Saudara untuk menghadiri hari bahagia pernikahan kami.</p>
+            <p className="text-white text-lg font-medium leading-relaxed">Em Nome de Deus, o Benevolente, o Misericordioso</p>
+            <p className="mt-4 text-white/90 leading-relaxed">Com a graça e bênção de Deus, convidamos vossa excelência e família para celebrarmos juntos o dia feliz do nosso casamento.</p>
           </div>
         </div>
 

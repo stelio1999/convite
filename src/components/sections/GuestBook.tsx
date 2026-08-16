@@ -25,13 +25,13 @@ export default function GuestBook() {
   const [totalPages, setTotalPages] = useState(1);
   const messagesPerPage = 5;
 
-  const formatDateWIB = (dateString: string) => {
+  const formatDateMZ = (dateString: string) => {
     const date = new Date(dateString);
     return (
       <>
         <span className="hidden sm:inline">
-          {date.toLocaleString('id-ID', {
-            timeZone: 'Asia/Jakarta',
+          {date.toLocaleString('pt-MZ', {
+            timeZone: 'Africa/Maputo',
             day: '2-digit',
             month: 'short',
             year: 'numeric',
@@ -40,8 +40,8 @@ export default function GuestBook() {
           }).replace(/\./g, ':')}
         </span>
         <span className="sm:hidden">
-          {date.toLocaleString('id-ID', {
-            timeZone: 'Asia/Jakarta',
+          {date.toLocaleString('pt-MZ', {
+            timeZone: 'Africa/Maputo',
             day: '2-digit',
             month: 'short',
             year: 'numeric',
@@ -70,7 +70,7 @@ export default function GuestBook() {
       setTotalPages(Math.ceil((count || 0) / messagesPerPage));
       setCurrentPage(page);
     } catch (err) {
-      setError('Failed to fetch messages');
+      setError('Erro ao carregar as mensagens');
       console.error(err);
     } finally {
       setLoading(false);
@@ -93,9 +93,9 @@ export default function GuestBook() {
       setMessage('');
     } catch (err: unknown) {
       if (err instanceof Error) {
-        setError('Failed to submit message: ' + err.message);
+        setError('Erro ao enviar mensagem: ' + err.message);
       } else {
-        setError('Failed to submit message: Unknown error');
+        setError('Erro ao enviar mensagem: Erro desconhecido');
       }
       console.error('Submission error:', err);
     } finally {
@@ -118,9 +118,9 @@ export default function GuestBook() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-serif mb-4 text-gray-800">
-            Guest Book
+            Livro de Visitas
           </h2>
-          <p className="text-gray-600">Leave your wishes for us</p>
+          <p className="text-gray-600">Deixe os seus votos para nós</p>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
@@ -135,7 +135,7 @@ export default function GuestBook() {
                   required
                 />
                 <label className="absolute top-2 left-4 text-sm text-gray-500 transition-all peer-focus:text-primary peer-focus:top-2 peer-focus:text-sm peer-placeholder-shown:top-4 peer-placeholder-shown:text-base">
-                  Your name
+                  O seu nome
                 </label>
               </div>
               
@@ -149,7 +149,7 @@ export default function GuestBook() {
                   required
                 />
                 <label className="absolute top-2 left-4 text-sm text-gray-500 transition-all peer-focus:text-primary peer-focus:top-2 peer-focus:text-sm peer-placeholder-shown:top-4 peer-placeholder-shown:text-base">
-                  Your message
+                  A sua mensagem
                 </label>
                 <span className="absolute bottom-2 right-2 text-xs text-gray-400">
                   {message.length}/500
@@ -164,7 +164,7 @@ export default function GuestBook() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
                 </svg>
-                <span>{loading ? 'Sending...' : 'Send Message'}</span>
+                <span>{loading ? 'A enviar...' : 'Enviar Mensagem'}</span>
               </button>
             </div>
           </form>
@@ -199,7 +199,7 @@ export default function GuestBook() {
                         <div className="flex items-center justify-between mb-3">
                           <h3 className="font-semibold text-gray-800 text-lg">{msg.name}</h3>
                           <span className="text-sm text-gray-500 ml-2 whitespace-nowrap">
-                            {formatDateWIB(msg.created_at)}
+                            {formatDateMZ(msg.created_at)}
                           </span>
                         </div>
                         <p className="text-gray-600 whitespace-pre-line mb-4">{msg.message}</p>
@@ -238,7 +238,7 @@ export default function GuestBook() {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
-                        <span>Previous</span>
+                        <span>Anterior</span>
                       </button>
                       <div className="flex items-center gap-2">
                         {Array.from({ length: totalPages }, (_, i) => (
@@ -260,7 +260,7 @@ export default function GuestBook() {
                         disabled={currentPage === totalPages}
                         className="flex items-center gap-2 px-4 py-2 bg-white border rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-sm"
                       >
-                        <span>Next</span>
+                        <span>Seguinte</span>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                         </svg>

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { scrollAnimation, viewportSettings } from '../animations/scrollAnimations';
 
-const QuranicVerses = () => {
+const WeddingVerses = () => {
   return (
     <motion.section
       className="py-16 bg-wedding-primary relative overflow-hidden"
@@ -30,13 +30,13 @@ const QuranicVerses = () => {
             viewport={viewportSettings}
           >
             <h3 className="text-xl font-semibold text-wedding-text mb-4">
-              QS. Ar-Rum (30:21)
+              Provérbios 18:22
             </h3>
             <p className="text-wedding-text/80 leading-relaxed mb-4">
-              "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir."
+              "Quem acha uma esposa acha o bem, e alcança a benevolência do Senhor."
             </p>
             <p className="text-wedding-text/80 italic">
-              - Al-Qur'an Surat Ar-Rum Ayat 21
+              - Santa Bíblia
             </p>
           </motion.div>
           
@@ -48,13 +48,13 @@ const QuranicVerses = () => {
             viewport={viewportSettings}
           >
             <h3 className="text-xl font-semibold text-wedding-text mb-4">
-              QS. An-Nisa (4:1)
+              1 Coríntios 13:4-7
             </h3>
             <p className="text-wedding-text/80 leading-relaxed mb-4">
-              "Hai sekalian manusia, bertakwalah kepada Tuhan-mu yang telah menciptakan kamu dari diri yang satu, dan daripadanya Allah menciptakan pasangannya; dan dari keduanya Allah memperkembang biakkan laki-laki dan perempuan yang banyak. Dan bertakwalah kepada Allah yang dengan (mempergunakan) nama-Nya kamu saling meminta satu sama lain, dan (peliharalah) hubungan silaturrahim. Sesungguhnya Allah selalu menjaga dan mengawasi kamu."
+              "O amor é paciente, o amor é bondoso. Não inveja, não se vangloria, não se orgulha. Não maltrata, não procura seus interesses, não se ira facilmente, não guarda rancor. O amor não se alegra com a injustiça, mas se alegra com a verdade. Tudo sofre, tudo crê, tudo espera, tudo suporta."
             </p>
             <p className="text-wedding-text/80 italic">
-              - Al-Qur'an Surat An-Nisa Ayat 1
+              - Santa Bíblia
             </p>
           </motion.div>
         </motion.div>
@@ -63,4 +63,4 @@ const QuranicVerses = () => {
   );
 };
 
-export default QuranicVerses;
+export default WeddingVerses;

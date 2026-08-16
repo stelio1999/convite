@@ -20,9 +20,9 @@ export default function DigitalEnvelope() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-6 md:mb-16">
           <h2 className="text-2xl md:text-4xl font-serif mb-2 md:mb-4" style={{ color: activeTheme.text }}>
-            Digital Envelope
+            Envelope Digital
           </h2>
-          <p className="text-gray-600 text-xs md:text-base">Your blessings mean a lot to us</p>
+          <p className="text-gray-600 text-xs md:text-base">As vossas bênçãos significam muito para nós</p>
         </div>
 
         <div className="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-8 max-w-4xl mx-auto">
@@ -47,15 +47,35 @@ export default function DigitalEnvelope() {
               />
             </div>
             <h3 className="text-xl md:text-2xl font-serif mb-4 md:mb-6 text-center" style={{ color: activeTheme.text }}>
-              Bank Transfer
+              Transferência Bancária
             </h3>
             <div className="space-y-4 md:space-y-6">
               {weddingConfig.digitalEnvelope.banks.map((bank, index) => (
                 <div key={index} className="p-4 border rounded-lg transition-colors">
                   <div>
-                    <p className="font-medium text-lg mb-2">{bank.name}</p>
-                    <p className="font-mono text-gray-600 mb-2">{bank.accountNumber}</p>
-                    <p className="text-sm text-gray-500 mb-3">a.n {bank.accountHolder}</p>
+                    {bank.logo && (
+                      <div className="relative w-16 h-16 md:w-20 md:h-20 mx-auto mb-3">
+                        <Image
+                          src={bank.logo}
+                          alt={`Logótipo do ${bank.name}`}
+                          fill
+                          className="object-contain"
+                          sizes="80px"
+                        />
+                      </div>
+                    )}
+
+                    <p className="font-medium text-lg mb-2 text-center">
+                      {bank.name}
+                    </p>
+
+                    <p className="font-mono text-gray-600 mb-2 text-center">
+                      {bank.accountNumber}
+                    </p>
+
+                    <p className="text-sm text-gray-500 mb-3 text-center">
+                     {bank.accountHolder}
+                    </p>
                   </div>
                   <div className="mt-4">
                     <button
@@ -63,7 +83,7 @@ export default function DigitalEnvelope() {
                       className="w-full py-2 px-4 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
                       style={{ color: activeTheme.text }}
                     >
-                      {copiedText === bank.accountNumber ? 'Copied!' : 'Copy Number'}
+                      {copiedText === bank.accountNumber ? 'Copiado!' : 'Copiar Número'}
                     </button>
                   </div>
                 </div>
@@ -92,24 +112,35 @@ export default function DigitalEnvelope() {
               />
             </div>
             <h3 className="text-xl md:text-2xl font-serif mb-4 md:mb-6 text-center" style={{ color: activeTheme.text }}>
-              E-Wallet
+              Carteira Móvel
             </h3>
             <div className="space-y-4 md:space-y-6">
               {weddingConfig.digitalEnvelope.eWallets.map((wallet, index) => (
                 <div key={index} className="p-4 border rounded-lg transition-colors">
                   <div>
-                    <p className="font-medium text-lg mb-2">{wallet.name}</p>
-                    <p className="font-mono text-gray-600 mb-2">{wallet.number}</p>
                     {wallet.logo && (
-                      <div className="relative w-14 h-14 md:w-20 md:h-20 mx-auto mb-2 md:mb-3">
+                      <div className="relative w-16 h-16 md:w-20 md:h-20 mx-auto mb-3">
                         <Image
                           src={wallet.logo}
-                          alt={`${wallet.name} Logo`}
+                          alt={`Logótipo de ${wallet.name}`}
                           fill
                           className="object-contain"
+                          sizes="80px"
                         />
                       </div>
                     )}
+
+                    <p className="font-medium text-lg mb-2 text-center">
+                      {wallet.name}
+                    </p>
+
+                    <p className="font-mono text-gray-600 mb-2 text-center">
+                      {wallet.number}
+                    </p>
+
+                    <p className="text-sm text-gray-500 mb-3 text-center">
+                      {wallet.accountHolder}
+                    </p>
                   </div>
                   <div className="mt-4">
                     <button
@@ -117,7 +148,7 @@ export default function DigitalEnvelope() {
                       className="w-full py-2 px-4 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
                       style={{ color: activeTheme.text }}
                     >
-                      {copiedText === wallet.number ? 'Copied!' : 'Copy Number'}
+                      {copiedText === wallet.number ? 'Copiado!' : 'Copiar Número'}
                     </button>
                   </div>
                 </div>

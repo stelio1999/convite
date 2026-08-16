@@ -32,7 +32,7 @@ export default function Gallery() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-serif mb-4" style={{ color: activeTheme.text }}>
-            Pre-Wedding Photos
+            Fotografias de Pré-Casamento
           </h2>
         </motion.div>
 
@@ -56,7 +56,7 @@ export default function Gallery() {
             >
               <Image
                 src={`${basePath}${photo.url}`}
-                alt="Pre-wedding photo"
+                alt="Fotografia de pré-casamento"
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 className="object-cover"
@@ -105,4 +105,3 @@ export default function Gallery() {
     </section>
   );
 }
-

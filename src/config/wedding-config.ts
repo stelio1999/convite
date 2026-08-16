@@ -59,6 +59,24 @@ export interface WeddingConfig {
       mapLink: string;
       dresscode?: string;
     };
+
+    Chiguiane: {
+      date: string;
+      time: string;
+      location: string;
+      address: string;
+      mapLink: string;
+      dresscode?: string;
+    };
+
+    lobolo: {
+      date: string;
+      time: string;
+      location: string;
+      address: string;
+      mapLink: string;
+      dresscode?: string;
+    };
   };
   gallery: {
     prewedding: Array<{
@@ -75,6 +93,7 @@ export interface WeddingConfig {
       name: string;
       accountNumber: string;
       accountHolder: string;
+      logo?: string;
     }>;
     eWallets: Array<{
       name: string;
@@ -149,8 +168,8 @@ export const themes = {
 export const weddingConfig = {
   couple: {
     bride: {
-      name: "Mempelai Wanita",
-      fullName: "R",
+      name: "Marcia Nhamtumbo",
+      fullName: "Nome Completo da Noiva",
       photo: {
         url: "wedding-invitation/images/couple/bride.webp",
         aspectRatio: "portrait",
@@ -159,8 +178,8 @@ export const weddingConfig = {
           portrait: "wedding-invitation/images/couple/frame-photo-2.webp"
         }
       },
-      parents: "Putri dari Bpk ... dan Ibu ...",
-      about: "Deskripsi singkat tentang mempelai wanita",
+      parents: "Filha do Sr. Alberto Mussa e da Sra. Argentina Nhamtumbo",
+      about: "Uma alma iluminada, cuja bondade e sorriso encantam a todos ao seu redor. Encontrou no seu amado o porto seguro onde os seus sonhos ganham vida.",
       socialMedia: {
         instagram: "https://instagram.com/",
         facebook: undefined,
@@ -168,8 +187,8 @@ export const weddingConfig = {
       }
     },
     groom: {
-      name: "Mempelai Pria",
-      fullName: "FR",
+      name: "Stelio Bobo",
+      fullName: "Nome Completo do Noivo",
       photo: {
         url: "wedding-invitation/images/couple/groom.webp",
         aspectRatio: "1:1",
@@ -178,117 +197,120 @@ export const weddingConfig = {
           portrait: "wedding-invitation/images/couple/frame-photo-2.webp"
         }
       },
-      parents: "Putra dari Bpk ... dan Ibu ...",
-      about: "Deskripsi singkat tentang mempelai pria",
+      parents: "Filho do Sr. Virgulino Bobo e da Sra. Joana Cuamba",
+      about: "Um homem de valores firmes e coração generoso. Encontrou na sua amada a inspiração para ser a sua melhor versão todos os dias.",
       socialMedia: {
-        instagram: "https://instagram.com/nayrbef",
+        instagram: "https://instagram.com",
         facebook: undefined,
         twitter: undefined
       }
     },
-    firstMeet: "Dengan izin Allah, perjalanan kami dimulai. 'Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya' (QS. Ar-Rum: 21)",
+    firstMeet: "Com a bênção de Deus, a nossa jornada começa. 'O amor é paciente, o amor é bondoso... Tudo sofre, tudo crê, tudo espera, tudo suporta.' (1 Coríntios 13:4-7)",
     loveStory: [
       {
-        date: "Januari 2022",
-        title: "Pertemuan Pertama",
-        description: "Atas kehendak Allah, kami dipertemukan dalam majelis ilmu. 'Sesungguhnya Allah menciptakan jodoh-jodoh di antara kalian' (HR. Muslim). Kami bersyukur atas pertemuan ini.",
+        date: "Janeiro 2022",
+        title: "O Primeiro Encontro",
+        description: "Sob a vontade de Deus, os nossos caminhos cruzaram-se. Somos gratos por este início.",
         image: "wedding-invitation/images/story/first-meet.webp"
       },
       {
-        date: "Maret 2022",
-        title: "Ta'aruf",
-        description: "Kami memulai proses ta'aruf dengan niat yang tulus. 'Wanita itu dinikahi karena empat hal: karena hartanya, keturunannya, kecantikannya, dan agamanya. Maka pilihlah yang memiliki agama, niscaya kamu akan beruntung' (HR. Bukhari).",
+        date: "Março 2022",
+        title: "O Conhecimento",
+        description: "Iniciámos o processo de nos conhecermos com intenções sinceras e respeito mútuo.",
         image: "wedding-invitation/images/gallery/prewedding-1.webp"
       },
       {
-        date: "Juni 2022",
-        title: "Khitbah",
-        description: "Dengan restu orang tua, kami memantapkan niat untuk membangun rumah tangga yang sakinah, mawaddah, wa rahmah. 'Dan nikahkanlah orang-orang yang masih membujang di antara kamu, dan juga orang-orang yang layak dari hamba-hamba sahayamu yang lelaki dan perempuan' (QS. An-Nur: 32).",
+        date: "Junho 2022",
+        title: "O Pedido",
+        description: "Com a bênção das nossas famílias, decidimos construir um lar assente no amor, companheirismo e fé.",
         image: "wedding-invitation/images/gallery/prewedding-2.webp"
       },
       {
-        date: "Desember 2022",
-        title: "Ramadhan Pertama Bersama",
-        description: "Bersama menjalani ibadah Ramadhan, saling mengingatkan dalam kebaikan. 'Sebaik-baik kamu adalah yang paling baik terhadap istrinya' (HR. Tirmidzi).",
+        date: "Dezembro 2022",
+        title: "Primeiros Momentos Juntos",
+        description: "Aprender a caminhar lado a lado, partilhando valores e crescendo juntos.",
         image: "wedding-invitation/images/gallery/moment-3.webp"
       },
       {
-        date: "Juni 2023",
-        title: "Lamaran",
-        description: "Dengan doa dan restu keluarga, kami melangkah ke tahap lamaran. 'Barangsiapa yang menikah, maka ia telah menyempurnakan separuh agamanya' (HR. Baihaqi).",
+        date: "Junho 2023",
+        title: "Noivado",
+        description: "Com orações e o apoio dos nossos entes queridos, demos mais um passo em direção ao nosso sonho.",
         image: "wedding-invitation/images/gallery/prewedding-3.webp"
       },
       {
-        date: "Masa Depan",
-        title: "Perjalanan Suci",
-        description: "Kami berdoa agar Allah SWT memberkahi pernikahan kami. 'Ya Allah, berkahilah kami dalam pasangan kami dan berkahilah pasangan kami untuk kami' (HR. Abu Dawud).",
+        date: "Futuro",
+        title: "A Jornada Sagrada",
+        description: "Oramos para que Deus abençoe a nossa união e nos guie nesta nova fase de vida.",
         image: "wedding-invitation/images/gallery/moment-1.webp"
       }
     ]
   },
   event: {
     akad: {
-      date: "2026-01-01",
+      date: "2026-01-02",
       time: "08:00",
-      venue: "Nama Tempat",
-      address: "Alamat Lengkap",
-      mapLink: "Google Maps Link",
-      dresscode: "Putih / Broken White",
-      additional_info: "Info tambahan tentang acara akad"
+      venue: "Conservatória do Registro Civil",
+      address: "2FM5+62Q, Matola",
+      mapLink: "google.com/maps?vet=10CAAQoqAOahcKEwjY05igg6WWAxUAAAAAHQAAAAAQEQ..i&rlz=1C1MDXY_pt-PTMZ1209MZ1209&pvq=Cg0vZy8xMWM1aDF0MDAx&fvr=1&cs=1&um=1&ie=UTF-8&fb=1&gl=mz&sa=X&ftid=0x1ee685e618d85bb3:0x9bd7365a0ed444c7",
+      dresscode: "Branco / Off-White",
+      additional_info: "Informações adicionais sobre a cerimónia"
+    },
+    chiguiane: {
+      date: "2026-01-03",
+      time: "08:00",
+      venue: "5F8V+MG2 Jamo",
+      address: "5F8V+MG2 Jamo",
+      mapLink: "https://www.google.com/maps/place/25%C2%B050'00.1%22S+32%C2%B029'37.5%22E/@-25.833362,32.493758,688m/data=!3m1!1e3!4m4!3m3!8m2!3d-25.833362!4d32.493758?entry=ttu&g_ep=EgoyMDI2MDgxMi4wIKXMDSoASAFQAw%3D%3D",
+      dresscode: "Branco / Off-White",
+      additional_info: "Em casa do Sr. Henrique"
+    },
+    lobolo: {
+      date: "2026-01-01",
+      time: "15:00",
+      venue: "Nhochane eventos",
+      address: "3GJJ+WP Matola",
+      mapLink: "google.com/maps?vet=10CAAQoqAOahcKEwjY05igg6WWAxUAAAAAHQAAAAAQEQ..i&rlz=1C1MDXY_pt-PTMZ1209MZ1209&pvq=Cg0vZy8xMWM1aDF0MDAx&fvr=1&cs=1&um=1&ie=UTF-8&fb=1&gl=mz&sa=X&ftid=0x1ee685e618d85bb3:0x9bd7365a0ed444c7",
+      dresscode: "Branco / Off-White",
+      additional_info: "Informações adicionais sobre a cerimónia"
     },
     reception: {
-      date: "2026-01-01",
+      date: "2026-01-02",
       time: "11:00",
-      venue: "Nama Tempat",
-      address: "Alamat Lengkap",
-      mapLink: "Google Maps Link",
-      dresscode: "Sage Green / Earthy Colors",
-      additional_info: "Info tambahan tentang acara resepsi"
+      venue: "Sonital Plaza",
+      address: "3GQ8+44R, Matola",
+      mapLink: "google.com/maps/place/Sonital+Plaza/data=!4m2!3m1!1s0x0:0xe80b218f2229ff58?sa=X&ved=1t:2428&ictx=111",
+      dresscode: "Verde Sálvia / Cores Terrosas",
+      additional_info: "Informações adicionais sobre a receção"
     }
+
   },
   digitalEnvelope: {
     banks: [
-      // {
-      //   name: "BCA",
-      //   accountNumber: "1234567890",
-      //   accountHolder: "NAMA PEMILIK"
-      // },
-      // {
-      //   name: "Mandiri",
-      //   accountNumber: "0987654321",
-      //   accountHolder: "NAMA PEMILIK"
-      // },
       {
-        name: "BNI",
+        name: "Millennium BIM",
         accountNumber: "1234567890",
-        accountHolder: "NAMA PEMILIK"
+        accountHolder: "NOME DO TITULAR",
+logo: "wedding-invitation/images/logos/bim.png"
       },
-      // {
-      //   name: "BSI",
-      //   accountNumber: "1234567890",
-      //   accountHolder: "NAMA PEMILIK"
-      // },
       {
-        name: "Bank Jago Syariah",
-        accountNumber: "1234567890",
-        accountHolder: "NAMA PEMILIK"
+        name: "BCI",
+        accountNumber: "1234567899",
+        accountHolder: "NOME DO TITULAR",
+logo: "wedding-invitation/images/logos/bci.png"
       }
     ],
     eWallets: [
       {
-        name: "GoPay",
-        number: "08888024148",
-        logo: "wedding-invitation/images/logos/gopay.webp"
+        name: "M-Pesa",
+        number: "840000000",
+        accountHolder: "NOME DO TITULAR",
+        logo: "wedding-invitation/images/logos/mpesa.png"
       },
-      // {
-      //   name: "OVO",
-      //   number: "08888024148",
-      //   logo: "wedding-invitation/images/logos/ovo.webp"
-      // },
       {
-        name: "ShopeePay",
-        number: "08",
-        logo: "wedding-invitation/images/logos/shopeepay.webp"
+        name: "e-Mola",
+        number: "860000000",
+        accountHolder: "NOME DO TITULAR",
+        logo: "wedding-invitation/images/logos/emola.png"
       }
     ]
   },
@@ -296,19 +318,19 @@ export const weddingConfig = {
     prewedding: [
       {
         url: '/images/gallery/optimized/prewedding-1.webp',
-        caption: 'Our First Date - Where It All Began'
+        caption: 'O nosso primeiro encontro - Onde tudo começou'
       },
       {
         url: '/images/gallery/optimized/prewedding-2.webp',
-        caption: 'Beach Getaway - Our First Vacation'
+        caption: 'Fuga para a praia - As nossas primeiras férias'
       },
       {
         url: '/images/gallery/optimized/prewedding-3.webp',
-        caption: 'Hiking Together - Overcoming Challenges'
+        caption: 'Caminhadas juntos - Superando desafios'
       },
       {
         url: '/images/gallery/optimized/moment-1.webp',
-        caption: 'First Concert - Sharing Our Love for Music'
+        caption: 'Primeiro concerto - Partilhando o nosso amor pela música'
       }
     ]
   },
@@ -316,8 +338,8 @@ export const weddingConfig = {
     tracks: [
       {
         src: '/wedding-invitation/music/song1.mp3',
-        title: 'Lagu 1',
-        artist: 'Artis 1'
+        title: 'Música 1',
+        artist: 'Artista 1'
       }
     ]
   },
@@ -327,19 +349,19 @@ export const weddingConfig = {
   },
   rsvp: {
     enabled: true,
-    deadline: "2024-05-20",
-    whatsappNumber: "081234567890",
+    deadline: "2025-05-20",
+    whatsappNumber: "841234567",
     additionalFields: [
       {
-        name: "jumlah_tamu",
-        label: "Jumlah Tamu",
+        name: "quantidade_convidados",
+        label: "Quantidade de Convidados",
         type: "number"
       },
       {
-        name: "kehadiran",
-        label: "Konfirmasi Kehadiran",
+        name: "confirmacao",
+        label: "Confirmação de Presença",
         type: "select",
-        options: ["Hadir", "Tidak Hadir", "Masih Ragu"]
+        options: ["Vou comparecer", "Não poderei comparecer", "Talvez"]
       }
     ]
   },
@@ -351,16 +373,10 @@ export const weddingConfig = {
       enabled: false,
       items: [
         {
-          title: "Amazon Registry",
-          description: "Find our wishlist on Amazon",
+          title: "Lista de Presentes",
+          description: "Veja a nossa lista de desejos",
           image: "/images/registry/amazon.webp",
-          link: "https://amazon.com/registry/..."
-        },
-        {
-          title: "Target Registry",
-          description: "Shop our registry at Target",
-          image: "/images/registry/target.webp",
-          link: "https://target.com/registry/..."
+          link: "https://..."
         }
       ]
     },

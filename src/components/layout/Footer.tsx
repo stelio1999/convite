@@ -16,17 +16,17 @@ export default function Footer() {
             {weddingConfig.couple.bride.name} & {weddingConfig.couple.groom.name}
           </h2>
           <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-            Ungkapan terima kasih yang tulus dari kami apabila Bapak/Ibu/Sdr/i berkenan hadir dan memberikan do'a restu kepada kami.
+            Agradecemos sinceramente a vossa presença e as vossas bênçãos por ocasião do nosso casamento.
           </p>
           <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-            Jazakumullah Khairan Katsira Wassalamu'alaikum Warahmatullahi Wabarakatuh.
+            Que Deus vos recompense grandemente. Assalamu&apos;alaikum Warahmatullahi Wabarakatuh.
           </p>
           <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-            Kami yang berbahagia Keluarga (Nama Mempelai Wanita) Keluarga (Nama Mempelai Pria)
+            Com muita felicidade, as Famílias da Noiva e do Noivo
           </p>
           <div className="text-white/60 text-sm">
-            <p>Made with ❤️</p>
-            <p className="mt-2">© {new Date().getFullYear()} All rights reserved</p>
+            <p>Feito com ❤️</p>
+            <p className="mt-2">© {new Date().getFullYear()} Todos os direitos reservados</p>
           </div>
         </motion.div>
       </div>

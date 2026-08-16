@@ -50,7 +50,6 @@ const Home: NextPage = () => {
         <Gallery />
         <LiveStreaming />
         <DigitalEnvelope />
-        <GuestBook />
         <RSVP guestName={guestName} />
         <GiftRegistry />
       </MainLayout>

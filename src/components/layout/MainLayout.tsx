@@ -15,7 +15,7 @@ interface MainLayoutProps {
 function ErrorFallback({ error }: { error: Error }) {
   return (
     <div role="alert" className="p-8 text-center">
-      <h2 className="text-2xl font-bold text-wedding-text mb-4">Something went wrong</h2>
+      <h2 className="text-2xl font-bold text-wedding-text mb-4">Algo deu errado</h2>
       <p className="text-wedding-text/80">{error.message}</p>
     </div>
   );
@@ -60,10 +60,10 @@ export default function MainLayout({ children, guestName }: MainLayoutProps) {
             transition={{ duration: 0.5 }}
           >
             <h3 className="text-xl text-white/80 mb-4 font-light">
-              {guestName ? `Dear ${guestName},` : 'You are invited to our wedding.'}
+              {guestName ? `Estimado(a) ${guestName},` : 'Está convidado(a) para o nosso casamento.'}
             </h3>
             <h1 className="text-4xl md:text-5xl font-serif text-white mb-4">
-              {guestName ? `We are getting married!` : `${weddingConfig.couple.bride.name} & ${weddingConfig.couple.groom.name}`}
+              {guestName ? `Vamos casar!` : `${weddingConfig.couple.bride.name} & ${weddingConfig.couple.groom.name}`}
             </h1>
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -72,7 +72,7 @@ export default function MainLayout({ children, guestName }: MainLayoutProps) {
               className="w-full px-8 py-4 bg-white/20 hover:bg-white/30 text-white rounded-full
                        transition-all border border-white/30 backdrop-blur-sm"
             >
-              Open Invitation
+              Abrir Convite
             </motion.button>
           </motion.div>
         </div>
@@ -83,8 +83,8 @@ export default function MainLayout({ children, guestName }: MainLayoutProps) {
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <Head>
-        <title>{`${weddingConfig.couple.bride.name} & ${weddingConfig.couple.groom.name} Wedding`}</title>
-        <meta name="description" content={`Wedding invitation for ${weddingConfig.couple.bride.name} & ${weddingConfig.couple.groom.name}`} />
+        <title>{`${weddingConfig.couple.bride.name} & ${weddingConfig.couple.groom.name} - Casamento`}</title>
+        <meta name="description" content={`Convite de casamento de ${weddingConfig.couple.bride.name} & ${weddingConfig.couple.groom.name}`} />
       </Head>
       
       <MusicPlayer isPlaying={isPlaying} setIsPlaying={setIsPlaying} />

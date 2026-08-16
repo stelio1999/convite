@@ -18,10 +18,10 @@ export default function GiftRegistry() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-serif mb-4" style={{ color: activeTheme.text }}>
-            Gift Registry
+            Lista de Ofertas / Presentes
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Your presence at our wedding is the greatest gift of all. However, if you wish to honor us with a gift, we have registered at the following places.
+            A vossa presença no nosso casamento é a maior prenda de todas. No entanto, caso nos queiram honrar com uma oferta, podem consultar a nossa lista abaixo.
           </p>
         </motion.div>
 
@@ -58,7 +58,7 @@ export default function GiftRegistry() {
                     className="inline-block px-6 py-2 rounded-full text-white transition-colors"
                     style={{ backgroundColor: activeTheme.primary }}
                   >
-                    View Registry
+                    Ver Lista
                   </a>
                 )}
               </div>
