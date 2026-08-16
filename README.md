@@ -64,7 +64,7 @@ The project includes GitHub Actions workflow for automatic deployment. Configure
 
 ## Project Structure
 ```
-wedding-invitation/
+
 ├── public/              # Static assets
 ├── src/
 │   ├── components/      # React components

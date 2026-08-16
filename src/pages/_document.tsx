@@ -8,7 +8,7 @@ class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta name="theme-color" content="#ffffff" />
-          <link rel="icon" href="/wedding-invitation/favicon.ico" />
+          <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
             content={`The wedding invitation of ${weddingConfig.couple.bride.name} & ${weddingConfig.couple.groom.name}`}

@@ -64,7 +64,7 @@ export default function EventDetails() {
                 <>
                   <div className="absolute -top-8 -left-8 w-32 h-32 opacity-50">
                     <Image
-                      src="wedding-invitation/images/pattern/flower-1.webp"
+                      src="images/pattern/flower-1.webp"
                       alt=""
                       fill
                       className="object-contain"
@@ -72,7 +72,7 @@ export default function EventDetails() {
                   </div>
                   <div className="absolute -bottom-8 -right-8 w-32 h-32 opacity-50 rotate-180">
                     <Image
-                      src="wedding-invitation/images/pattern/flower-2.webp"
+                      src="images/pattern/flower-2.webp"
                       alt=""
                       fill
                       className="object-contain"
@@ -86,7 +86,7 @@ export default function EventDetails() {
                 <>
                   <div className="absolute -top-8 -left-8 w-32 h-32 opacity-50">
                     <Image
-                      src="wedding-invitation/images/pattern/flower-3.webp"
+                      src="images/pattern/flower-3.webp"
                       alt=""
                       fill
                       className="object-contain"
@@ -94,7 +94,7 @@ export default function EventDetails() {
                   </div>
                   <div className="absolute -bottom-8 -right-8 w-32 h-32 opacity-50 rotate-180">
                     <Image
-                      src="wedding-invitation/images/pattern/flower-1.webp"
+                      src="images/pattern/flower-1.webp"
                       alt=""
                       fill
                       className="object-contain"

@@ -50,7 +50,7 @@ export default function MainLayout({ children, guestName }: MainLayoutProps) {
 
   if (!hasInteracted) {
     return (
-      <div className="fixed inset-0 flex items-center justify-center min-h-screen bg-[url('/wedding-invitation/images/background/hero-bg.webp')] bg-cover bg-center">
+      <div className="fixed inset-0 flex items-center justify-center min-h-screen bg-[url('/images/background/hero-bg.webp')] bg-cover bg-center">
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
         <div className="relative z-10 text-center p-8 max-w-xl mx-auto">
           <motion.div 
@@ -91,7 +91,7 @@ export default function MainLayout({ children, guestName }: MainLayoutProps) {
       <div className="relative overflow-x-hidden">
 
         {/* Animated Background */}
-        <div className="fixed inset-0 bg-[url('/wedding-invitation/images/pattern/subtle-pattern.webp')] bg-repeat bg-[length:100px] md:bg-[length:200px] opacity-50 animate-move-bg z-10"></div>
+        <div className="fixed inset-0 bg-[url('/images/pattern/subtle-pattern.webp')] bg-repeat bg-[length:100px] md:bg-[length:200px] opacity-50 animate-move-bg z-10"></div>
 
         {/* Main Content */}
         <div className="relative z-30">

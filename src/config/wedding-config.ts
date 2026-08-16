@@ -171,11 +171,11 @@ export const weddingConfig = {
       name: "Marcia Nhamtumbo",
       fullName: "Nome Completo da Noiva",
       photo: {
-        url: "wedding-invitation/images/couple/bride.webp",
+        url: "images/couple/bride.webp",
         aspectRatio: "portrait",
         frame: {
-          "1:1": "wedding-invitation/images/couple/frame-photo-1.webp",
-          portrait: "wedding-invitation/images/couple/frame-photo-2.webp"
+          "1:1": "images/couple/frame-photo-1.webp",
+          portrait: "images/couple/frame-photo-2.webp"
         }
       },
       parents: "Filha do Sr. Alberto Mussa e da Sra. Argentina Nhamtumbo",
@@ -190,11 +190,11 @@ export const weddingConfig = {
       name: "Stelio Bobo",
       fullName: "Nome Completo do Noivo",
       photo: {
-        url: "wedding-invitation/images/couple/groom.webp",
+        url: "images/couple/groom.webp",
         aspectRatio: "1:1",
         frame: {
-          "1:1": "wedding-invitation/images/couple/frame-photo-1.webp",
-          portrait: "wedding-invitation/images/couple/frame-photo-2.webp"
+          "1:1": "images/couple/frame-photo-1.webp",
+          portrait: "images/couple/frame-photo-2.webp"
         }
       },
       parents: "Filho do Sr. Virgulino Bobo e da Sra. Joana Cuamba",
@@ -211,37 +211,37 @@ export const weddingConfig = {
         date: "Janeiro 2022",
         title: "O Primeiro Encontro",
         description: "Sob a vontade de Deus, os nossos caminhos cruzaram-se. Somos gratos por este início.",
-        image: "wedding-invitation/images/story/first-meet.webp"
+        image: "images/story/first-meet.webp"
       },
       {
         date: "Março 2022",
         title: "O Conhecimento",
         description: "Iniciámos o processo de nos conhecermos com intenções sinceras e respeito mútuo.",
-        image: "wedding-invitation/images/gallery/prewedding-1.webp"
+        image: "images/gallery/prewedding-1.webp"
       },
       {
         date: "Junho 2022",
         title: "O Pedido",
         description: "Com a bênção das nossas famílias, decidimos construir um lar assente no amor, companheirismo e fé.",
-        image: "wedding-invitation/images/gallery/prewedding-2.webp"
+        image: "images/gallery/prewedding-2.webp"
       },
       {
         date: "Dezembro 2022",
         title: "Primeiros Momentos Juntos",
         description: "Aprender a caminhar lado a lado, partilhando valores e crescendo juntos.",
-        image: "wedding-invitation/images/gallery/moment-3.webp"
+        image: "images/gallery/moment-3.webp"
       },
       {
         date: "Junho 2023",
         title: "Noivado",
         description: "Com orações e o apoio dos nossos entes queridos, demos mais um passo em direção ao nosso sonho.",
-        image: "wedding-invitation/images/gallery/prewedding-3.webp"
+        image: "images/gallery/prewedding-3.webp"
       },
       {
         date: "Futuro",
         title: "A Jornada Sagrada",
         description: "Oramos para que Deus abençoe a nossa união e nos guie nesta nova fase de vida.",
-        image: "wedding-invitation/images/gallery/moment-1.webp"
+        image: "images/gallery/moment-1.webp"
       }
     ]
   },
@@ -290,13 +290,13 @@ export const weddingConfig = {
         name: "Millennium BIM",
         accountNumber: "1234567890",
         accountHolder: "NOME DO TITULAR",
-logo: "wedding-invitation/images/logos/bim.png"
+logo: "images/logos/bim.png"
       },
       {
         name: "BCI",
         accountNumber: "1234567899",
         accountHolder: "NOME DO TITULAR",
-logo: "wedding-invitation/images/logos/bci.png"
+logo: "images/logos/bci.png"
       }
     ],
     eWallets: [
@@ -304,13 +304,13 @@ logo: "wedding-invitation/images/logos/bci.png"
         name: "M-Pesa",
         number: "840000000",
         accountHolder: "NOME DO TITULAR",
-        logo: "wedding-invitation/images/logos/mpesa.png"
+        logo: "images/logos/mpesa.png"
       },
       {
         name: "e-Mola",
         number: "860000000",
         accountHolder: "NOME DO TITULAR",
-        logo: "wedding-invitation/images/logos/emola.png"
+        logo: "images/logos/emola.png"
       }
     ]
   },
@@ -337,7 +337,7 @@ logo: "wedding-invitation/images/logos/bci.png"
   music: {
     tracks: [
       {
-        src: '/wedding-invitation/music/song1.mp3',
+        src: '/music/song1.mp3',
         title: 'Música 1',
         artist: 'Artista 1'
       }

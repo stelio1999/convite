@@ -31,7 +31,7 @@ export default function DigitalEnvelope() {
             {/* Top-left decoration */}
             <div className="absolute -top-4 -left-4 w-20 h-20 opacity-50">
               <Image
-                src="wedding-invitation/images/pattern/flower-2.webp"
+                src="images/pattern/flower-2.webp"
                 alt=""
                 fill
                 className="object-contain"
@@ -40,7 +40,7 @@ export default function DigitalEnvelope() {
             {/* Bottom-right decoration */}
             <div className="absolute -bottom-4 -right-4 w-20 h-20 opacity-50 rotate-180">
               <Image
-                src="wedding-invitation/images/pattern/flower-3.webp"
+                src="images/pattern/flower-3.webp"
                 alt=""
                 fill
                 className="object-contain"
@@ -96,7 +96,7 @@ export default function DigitalEnvelope() {
             {/* Top-left decoration */}
             <div className="absolute -top-4 -left-4 w-20 h-20 opacity-50">
               <Image
-                src="wedding-invitation/images/pattern/flower-1.webp"
+                src="images/pattern/flower-1.webp"
                 alt=""
                 fill
                 className="object-contain"
@@ -105,7 +105,7 @@ export default function DigitalEnvelope() {
             {/* Bottom-right decoration */}
             <div className="absolute -bottom-4 -right-4 w-20 h-20 opacity-50 rotate-180">
               <Image
-                src="wedding-invitation/images/pattern/flower-2.webp"
+                src="images/pattern/flower-2.webp"
                 alt=""
                 fill
                 className="object-contain"
