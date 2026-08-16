@@ -6,7 +6,6 @@ import StoryTimeline from '@/components/sections/StoryTimeline';
 import EventDetails from '@/components/sections/EventDetails';
 import Gallery from '@/components/sections/Gallery';
 import DigitalEnvelope from '@/components/sections/DigitalEnvelope';
-import GuestBook from '@/components/sections/GuestBook';
 import RSVP from '@/components/sections/RSVP';
 import LiveStreaming from '@/components/sections/LiveStreaming';
 // import ShareButton from '@/components/features/ShareButton';

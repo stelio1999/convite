@@ -14,7 +14,7 @@ export default function EventDetails() {
   };
 
   // Função para abrir o Google Maps utilizando o endereço ou mapLink como destino e traçar a rota a partir da localização atual
-  const handleGetDirections = (venue: string, address: string, mapLink: string) => {
+  const handleGetDirections = (venue: string, address: string, ) => {
     // Se o mapLink for uma URL válida do Google Maps contendo coordenadas ou query, tentamos extrair ou usar o endereço/venue
     const destinationQuery = encodeURIComponent(`${venue}, ${address}`);
     // A URL de direções do Google Maps ('/dir/') aceita o parâmetro destination. 
@@ -135,7 +135,7 @@ export default function EventDetails() {
                 )}
 
                 <button
-                  onClick={() => handleGetDirections(event.details.venue, event.details.address, event.details.mapLink)}
+                  onClick={() => handleGetDirections(event.details.venue, event.details.address)}
                   className="block w-full text-center bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium py-3 rounded-lg transition-colors mt-6 cursor-pointer"
                 >
                   Ver Localização

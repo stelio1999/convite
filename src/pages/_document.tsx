@@ -4,7 +4,7 @@ import { weddingConfig } from '@/config/wedding-config';
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="id">
+      <Html lang="pt-mz">
         <Head>
           <meta charSet="utf-8" />
           <meta name="theme-color" content="#ffffff" />
