@@ -11,11 +11,11 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
-            content={`The wedding invitation of ${weddingConfig.couple.bride.name} & ${weddingConfig.couple.groom.name}`}
+            content={`O convite de casamento de ${weddingConfig.couple.bride.name} & ${weddingConfig.couple.groom.name}`}
           />
           <meta property="og:type" content="website" />
-          <meta property="og:locale" content="id_ID" />
-          <meta property="og:site_name" content="Wedding Invitation" />
+          <meta property="og:locale" content="pt_MZ" />
+          <meta property="og:site_name" content="Convite de Casamento" />
         </Head>
         <body>
           <Main />

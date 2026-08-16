@@ -28,7 +28,7 @@ const decorative = Great_Vibes({
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    // Handle service worker unregistration
+    // Gerenciar o cancelamento do registro do service worker
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       navigator.serviceWorker.getRegistrations().then(function(registrations) {
         for(const registration of registrations) {
@@ -41,10 +41,10 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>{`The Wedding of ${weddingConfig.couple.bride.name} & ${weddingConfig.couple.groom.name}`}</title>
-        <meta name="description" content="We are getting married! Join us to celebrate our special day." />
-        <meta property="og:title" content={`The Wedding of ${weddingConfig.couple.bride.name} & ${weddingConfig.couple.groom.name}`} />
-        <meta property="og:description" content="We are getting married! Join us to celebrate our special day." />
+        <title>{`Casamento de ${weddingConfig.couple.bride.name} & ${weddingConfig.couple.groom.name}`}</title>
+        <meta name="description" content="Vamos nos casar! Junte-se a nós para celebrar o nosso dia especial." />
+        <meta property="og:title" content={`Casamento de ${weddingConfig.couple.bride.name} & ${weddingConfig.couple.groom.name}`} />
+        <meta property="og:description" content="Vamos nos casar! Junte-se a nós para celebrar o nosso dia especial." />
         <meta property="og:image" content="/images/og-image.webp" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
