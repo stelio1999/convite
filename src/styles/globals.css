@@ -15,3 +15,17 @@
     perspective: 1000px;
   }
 }
+
+
+body {
+  font-family: var(--font-primary), system-ui, -apple-system, sans-serif;
+}
+
+/* Força a aplicação da fonte com serifa nos nomes dos noivos */
+h1, h2, h3, .font-secondary {
+  font-family: var(--font-secondary), Georgia, serif;
+}
+
+.font-decorative {
+  font-family: var(--font-decorative), cursive;
+}
